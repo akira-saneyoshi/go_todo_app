@@ -2,4 +2,7 @@ module github.com/budougumi0617/go_todo_app
 
 go 1.19
 
-require golang.org/x/sync v0.0.0-20220929204114-8fcdb60fdcc0
+require (
+    golang.org/x/sync v0.0.0-20220929204114-8fcdb60fdcc0
+    github.com/caarlos0/env/v6 v6.10.1 // indirect
+)
