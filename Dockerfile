@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -trumpath -ldflags "-w -s" -o app
+RUN go build -trimpath -ldflags "-w -s" -o app
 
 FROM debian:bullseye-slim  as deploy
 
