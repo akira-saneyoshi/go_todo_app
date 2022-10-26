@@ -6,7 +6,7 @@ import (
 	"github.com/budougumi0617/go_todo_app/entity"
 )
 
-func (r *Repository) Addtask(
+func (r *Repository) AddTask(
 	ctx context.Context, db Execer, t *entity.Task,
 ) error {
 	t.Created = r.Clocker.Now()
@@ -28,7 +28,7 @@ func (r *Repository) Addtask(
 	return nil
 }
 
-func (r *Repository) Listtasks(
+func (r *Repository) ListTasks(
 	ctx context.Context, db Queryer,
 ) (entity.Tasks, error) {
 	tasks := entity.Tasks{}
