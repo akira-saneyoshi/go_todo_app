@@ -9,8 +9,8 @@ import (
 )
 
 type ListTask struct {
-	DB	    *sqlx.DB
-	Repo	*store.Repository
+	DB   *sqlx.DB
+	Repo *store.Repository
 }
 
 type task struct {

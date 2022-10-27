@@ -15,8 +15,8 @@ import (
 func NewMux(ctx context.Context, cfg *config.Config) (http.Handler, func(), error) {
 	mux := chi.NewRouter()
 	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/josn; charset=utf-8")
-		_, _ = w.Write([]byte(`{"status": "OK"}`))
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		_, _ = w.Write([]byte(`{"status": "ok"}`))
 	})
 	v := validator.New()
 	db, cleanup, err := store.New(ctx, cfg)

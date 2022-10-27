@@ -11,8 +11,8 @@ import (
 )
 
 type AddTask struct {
-	DB	  	  *sqlx.DB
-	Repo 	  *store.Repository
+	DB        *sqlx.DB
+	Repo      *store.Repository
 	Validator *validator.Validate
 }
 
@@ -35,8 +35,8 @@ func (at *AddTask) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	t := &entity.Task{
-		Title:   b.Title,
-		Status:  entity.TaskStatusTodo,
+		Title:  b.Title,
+		Status: entity.TaskStatusTodo,
 	}
 	err := at.Repo.AddTask(ctx, at.DB, t)
 	if err != nil {
