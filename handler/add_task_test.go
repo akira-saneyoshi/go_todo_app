@@ -48,7 +48,6 @@ func TestAddTask(t *testing.T) {
 				"/tasks",
 				bytes.NewReader(testutil.LoadFile(t, tt.reqFile)),
 			)
-
 			moq := &AddTaskServiceMock{}
 			moq.AddTaskFunc = func(
 				ctx context.Context, title string,
@@ -58,6 +57,7 @@ func TestAddTask(t *testing.T) {
 				}
 				return nil, errors.New("error from mock")
 			}
+
 			sut := AddTask{
 				Service:   moq,
 				Validator: validator.New(),

@@ -15,19 +15,19 @@ var _ ListTasksService = &ListTasksServiceMock{}
 
 // ListTasksServiceMock is a mock implementation of ListTasksService.
 //
-//	func TestSomethingThatUsesListTasksService(t *testing.T) {
+// 	func TestSomethingThatUsesListTasksService(t *testing.T) {
 //
-//		// make and configure a mocked ListTasksService
-//		mockedListTasksService := &ListTasksServiceMock{
-//			ListTasksFunc: func(ctx context.Context) (entity.Tasks, error) {
-//				panic("mock out the ListTasks method")
-//			},
-//		}
+// 		// make and configure a mocked ListTasksService
+// 		mockedListTasksService := &ListTasksServiceMock{
+// 			ListTasksFunc: func(ctx context.Context) (entity.Tasks, error) {
+// 				panic("mock out the ListTasks method")
+// 			},
+// 		}
 //
-//		// use mockedListTasksService in code that requires ListTasksService
-//		// and then make assertions.
+// 		// use mockedListTasksService in code that requires ListTasksService
+// 		// and then make assertions.
 //
-//	}
+// 	}
 type ListTasksServiceMock struct {
 	// ListTasksFunc mocks the ListTasks method.
 	ListTasksFunc func(ctx context.Context) (entity.Tasks, error)
@@ -61,8 +61,7 @@ func (mock *ListTasksServiceMock) ListTasks(ctx context.Context) (entity.Tasks, 
 
 // ListTasksCalls gets all the calls that were made to ListTasks.
 // Check the length with:
-//
-//	len(mockedListTasksService.ListTasksCalls())
+//     len(mockedListTasksService.ListTasksCalls())
 func (mock *ListTasksServiceMock) ListTasksCalls() []struct {
 	Ctx context.Context
 } {
@@ -81,19 +80,19 @@ var _ AddTaskService = &AddTaskServiceMock{}
 
 // AddTaskServiceMock is a mock implementation of AddTaskService.
 //
-//	func TestSomethingThatUsesAddTaskService(t *testing.T) {
+// 	func TestSomethingThatUsesAddTaskService(t *testing.T) {
 //
-//		// make and configure a mocked AddTaskService
-//		mockedAddTaskService := &AddTaskServiceMock{
-//			AddTaskFunc: func(ctx context.Context, title string) (*entity.Task, error) {
-//				panic("mock out the AddTask method")
-//			},
-//		}
+// 		// make and configure a mocked AddTaskService
+// 		mockedAddTaskService := &AddTaskServiceMock{
+// 			AddTaskFunc: func(ctx context.Context, title string) (*entity.Task, error) {
+// 				panic("mock out the AddTask method")
+// 			},
+// 		}
 //
-//		// use mockedAddTaskService in code that requires AddTaskService
-//		// and then make assertions.
+// 		// use mockedAddTaskService in code that requires AddTaskService
+// 		// and then make assertions.
 //
-//	}
+// 	}
 type AddTaskServiceMock struct {
 	// AddTaskFunc mocks the AddTask method.
 	AddTaskFunc func(ctx context.Context, title string) (*entity.Task, error)
@@ -131,8 +130,7 @@ func (mock *AddTaskServiceMock) AddTask(ctx context.Context, title string) (*ent
 
 // AddTaskCalls gets all the calls that were made to AddTask.
 // Check the length with:
-//
-//	len(mockedAddTaskService.AddTaskCalls())
+//     len(mockedAddTaskService.AddTaskCalls())
 func (mock *AddTaskServiceMock) AddTaskCalls() []struct {
 	Ctx   context.Context
 	Title string
